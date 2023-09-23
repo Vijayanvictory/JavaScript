@@ -5,24 +5,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function demo()
+        //Object Data type
+        var person = {"name":"viajyan","surename":"vijayan","age":"20"};
+        var car = {"brand":"BMW","color":"red","doors":2};
+        document.write(person.surename + "<br>",person.name + "<br>",person.age + "<br>");
+       document.write(car.brand + "<br>",car.color + "<br>",car.doors + "<br>");
+
+       //Array Data type
+       var colors = ["Red","Yellow","Green","Orange"];
+       var cities = ["Londan", "paris","New york"];
+       document.write(colors[0]+"<br>",colors[1]+"<br>",colors[2]+"<br>",colors[3]+"<br>");
+       document.write(cities[0]+"<br>",cities[1]+"<br>",cities[2]+"<br>");
+
+       //type() operator
+       document.write(typeof 15+"<br>");
+       document.write(typeof "vijayan" +"<br>");
+       document.write(typeof 22.7+"<br>");
+       document.write(typeof True + "<br>");
+
+       //if else statement
+        function ifdemo(){
+            let age=60;
+            if(age>=30 && age<=40)
+             document.write("need to work hard" + "<br>");
+
+            else if(age>45 && age<=60)
+                document.write("average"+ "<br>");
+            
+            else if(age>60 && age<=80)
+                document.write("good" + "<br>");
+
+            else if(age>80 && age<=100)
+                document.write("Excellent" + "<br>");
+
+            else
+                document.write("Enter valid mark" + "<br>");     
+        }
+        ifdemo();
+
+        //switch case
+        function count(){
+        let name='vijayan';
+        let result;
+        switch(name){
+
+            case 'arun':
+                result="Wrong name"
+                break;
+
+            case 'sathish':
+                result="wrong name"
+                break;
+
+            case 'vijayan':
+                result="match found"
+                break;
+
+            case 'siva':
+                result="wrong found"
+                break;
+
+            default:
+                result="no name";
+        }
+        document.write(result + "<br>");
+    }
+    count();
+
+    //looping statement <Entry control>  <Exit control>
+
+        //for loop
+        function fordemo(){
+            for(let i=1; i<=6; i++){
+                document.write(i+"<br>")
+            }
+        }
+         fordemo();
+
+         //while loop
+         function whiledemo(){
+            let i=11;
+            while(i<=15)
+            {
+                document.write(i + "<br>");
+                i++;
+            }
+         }
+         whiledemo();
+
+
+         //do_while loop
+         function dowhiledemo(){
+            let i=21;
+            do{
+                document.write(i+"<br>");
+                i++;
+            }
+            while(i<=25);
+         }
+         dowhiledemo();
+
+         //alert
+         function msg(){
+            alert("this is spaarta");
+         }
+
+         //return
+         function returndemo(a,b)
+         {
+            return a+b;
+         }
+         document.write(returndemo(10,10));
+
+         //function argument
+         function getcube(a){
+            alert(a*a*a*a);
+         }
+
+         //
+         function adno(a,b)
         {
-            document.write("Hi...");
-            var a=("hello");
-            document.write(a);
-            document.write("some text" / 16/0);
+            return a+b;
+        }
+         function no1(){
+             let a = adno(5,4);
+             document.write(a);
+             document.write(a*2);
 
         }
-        function fun()
-        {
-            document.write('""\hey im vijayan"\"');
+        no1();
 
+        //dom - document object model
+        function printvalue(){
+            var name=document.form1.name.value;
+            alert("welcome:"+name);
         }
-        fun();
-        demo();
+        //get element by id
+        function getcube(){
+            var number=document.getElementById("number").value;
+            alert(number*number*number);
+        }
+
+        //on click event
+        function manipulateStyles(){
+            document.getElementById("headingElement").textContent="4.0 Technologies";
+            document.getElementById("headingElement").style.color="blue";
+        }
+        //get element by name
+        function totalelements(){
+            var allgenders=document.getElementsByName("gender");
+            alert("Total genders:"+allgenders.length);
+        }
+        //get elements by tag name
+        function countTag(){
+            var tags=document.getElementsByTagName("p");
+            alert("Total Tags:"+tags.length);
+        }
+
+        // Inner HTML
+        function commentForm(){
+            var data="Full stack";
+            document.getElementById('demo').innerHTML=data;
+        }
+        //password
+        function validPass(){
+            if(document.uForm.pass.value.length>5)
+            msg="good";
+            else
+            msg="poor"; 
+            document.getElementById('valid').innerText=msg;
+        }
+
     </script>
 </head>
 <body>
+    <!--alert-->
+    <input type="button" onclick="msg()" value="click" ><br>
+    <!--function argument-->
+    <input type="button" value="Click Here " onclick="getcube(4);">
 
+    <!--Dom form-->
+    <form name="form1">
+        Enter name:<input type="text" name="name"/>
+        <input type="button" onclick="printvalue()" value="print name"/>
+    </form>
+    <!--gert element by id-->
+    <form>
+        Enter no:<input type="text" id="number" name="number"/><br>
+        <input type="button" value="cube" onclick="getcube()"/>
+    </form>
+
+    <!---on click event-->
+    <h1 id="headingElement">Web technologies</h1>
+    <button onclick="manipulateStyles()">change Heading</button>
+
+    <!--get element by name-->
+    <form>
+        Male:<input type="radio" name="gender" value="male">
+        Female;<input type="radio" name="gender" value="female">
+        <input type="button" onclick="totalelements()" value="Total genders">
+    </form>
+    <!--grt elements bt tag name-->
+    <p>hi</p>
+    <p>hi</p>
+    <p>lore</p>
+    <input type="button" onclick="countTag()" value="ok"/><br><br><br>
+    <!--Inner HTML-->
+    <form name="myForm">
+        <input type="button" value="comment" onclick="commentForm()">
+        <h1 id="demo">Welcom</h1>
+    </form>
+    <!--password-->
+    <form action="gyu" name="uForm"> 
+        password:<input type="password" value="" name="pass" onkeyup="validPass()" required/>
+        strength:<span id="valid">No strength</span>
+        <input type="submit" value="Enter">
+    </form>
 </body>
 </html>

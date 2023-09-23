@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ body{
+  background-color: rgb(218, 210, 210);
+ }
+    #red{
+      background-color: rgb(78, 79, 79);
+      height: 80px;
+      width: 80px;
+      border-radius: 100%;
+      margin-bottom: 10px;
+    }
+
+    #yellow{
+      background-color: rgb(78, 79, 79);
+      height: 80px;
+      width: 80px;
+      border-radius: 100%;
+      margin-bottom: 10px;
+    }
+
+    #green{
+      background-color: rgb(78, 79, 79);
+      height: 80px;
+      width: 80px;
+      border-radius: 100%;
+    }
+    #black{
+      background-color: black;
+      height:300px;
+      width: 100px;
+      z-index: -1;
+      border-radius:40px;
+      margin-top: -275px;
+      margin-left: -9px;
+    }
+
+    .button_one{
+      background-color:  rgb(28, 27, 27);;
+      color: white;
+      border: none;
+      height: 30px;
+      border-radius: 10px;
+      margin: 10px;
+    }
+    .button_two{
+      background-color: rgb(28, 27, 27);;
+      color: white;
+      border: none;
+      height: 30px;
+      border-radius: 10px;
+      margin: 10px;
+    }
+    .button_three{
+      background-color: rgb(28, 27, 27);
+      color: white;
+      border: none;
+      height: 30px;
+      border-radius: 10px;
+      margin: 10px;
+    }
+
+    .first{
+      display:grid;
+      justify-content: center;
+      margin-right: 300px;
+      margin-bottom: -200px;
+      margin-top: 200px;
+    }
+    .signal{
+      display: grid;
+      justify-content: center;
+    }
+   
+
+  </style> 
+  <script>
+
+    function stop(){
+      var start=document.getElementById("red").style.backgroundColor="red";
+      var start=document.getElementById("yellow").style.backgroundColor=" rgb(78, 79, 79)";
+      var start=document.getElementById("green").style.backgroundColor=" rgb(78, 79, 79)";
+
+      //button
+      var start=document.getElementById("redbutton").style.backgroundColor="red";
+      var start=document.getElementById("yellowbutton").style.backgroundColor=" rgb(28, 27, 27";
+      var start=document.getElementById("greenbutton").style.backgroundColor="rgb(28, 27, 27)";
+
+    }
+
+    function ready(){
+      var start=document.getElementById("yellow").style.backgroundColor="yellow";
+      var start=document.getElementById("green").style.backgroundColor=" rgb(78, 79, 79)";
+      var start=document.getElementById("red").style.backgroundColor=" rgb(78, 79, 79)";
+
+      //button
+      var start=document.getElementById("yellowbutton").style.backgroundColor="yellow";
+      var start=document.getElementById("greenbutton").style.backgroundColor="rgb(28, 27, 27)";
+      var start=document.getElementById("redbutton").style.backgroundColor="rgb(28, 27, 27)";
+
+    }
+
+    function go(){
+      var start=document.getElementById("green").style.backgroundColor="green";
+      var start=document.getElementById("yellow").style.backgroundColor=" rgb(78, 79, 79)";
+      var start=document.getElementById("red").style.backgroundColor=" rgb(78, 79, 79)";
+
+      //button
+      var start=document.getElementById("greenbutton").style.backgroundColor="green";
+      var start=document.getElementById("yellowbutton").style.backgroundColor="rgb(28, 27, 27)";
+      var start=document.getElementById("redbutton").style.backgroundColor="rgb(28, 27, 27)";
+    }
+
+  </script>
+</head>
+<body>
+  <div class="first">
+    <button id="redbutton" class="button_one" onclick="stop()" > STOP </button>
+    <button id="yellowbutton" class="button_two" onclick="ready()" > READY </button>
+    <button id="greenbutton" class="button_three" onclick="go()" > GO </button>
+  </div>
+
+  <div class="signal"> 
+    <div id="red"></div>
+    <div id="yellow"></div>
+    <div id="green"></div>
+    <div id="black"></div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .bulboff{
+            display:grid;
+            justify-content: center;
+        }
+        .eyeondark{
+            display:grid;
+            justify-content: center;
+        }
+        .box{
+            border-radius: 20px;
+            background-color: rgb(132, 129, 129);
+            width: 200px;
+            height: 80px;
+        }
+        .text{
+            display: flex;
+            justify-content: center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+        }
+        .button{
+        margin-left: 60px;
+        }
+        button{
+            border-radius: 10px;
+        }
+        .content{
+            padding-top: 20px;
+        }
+        .align{
+            margin-top: 200px;
+            margin-left: 500px;
+        }
+
+    </style>
+
+    <script>
+        function switchon(){
+            document.getElementById("cat").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png";
+            document.getElementById("bulbon").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
+            document.getElementById("on").style.backgroundColor="green"
+            document.getElementById("off").style.backgroundColor="rgb(132, 129, 129)"
+            document.getElementById("off").style.color="white"
+        }
+        function switchoff(){
+            document.getElementById("bulbon").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png"
+            document.getElementById("cat").src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png"
+            document.getElementById("off").style.backgroundColor="red"
+            document.getElementById("on").style.backgroundColor="rgb(132, 129, 129)"
+            document.getElementById("on").style.color="white"
+        }
+        
+    </script>
+</head>
+<body>
+    <!-- bulboff -->
+    <div class="bulboff">
+    <img id="bulbon" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png"  alt="" height="200px" width="100px">
+    </div>
+    <!-- eyeondark -->
+    <div class="eyeondark" >
+        <img id="cat" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png" alt="" height="200px" width="200px">
+    </div>
+
+    <!-- button -->
+            <div class="align">
+                <div class="box">
+                <div class="content">
+                    <div class="text">Switched off</div>
+                        <div class="button">
+                        <button id="off"  onclick="switchoff()">off</button>
+                        <button id="on" onclick="switchon()">on</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function demo(){
+             var a = parseInt(document.getElementById("int1").value)
+             var b = parseInt(document.getElementById("int2").value)
+             document.getElementById("result").innerHTML="Addition:" + (a+b) + "<br>" + "subtraction:" + (a-b) + "<br>" + "Multiplication:" + (a*b)+ "<br>" + "Division:" + (a/b)+ "<br>" + "Modulus:" + (a%b);
+
+            // let a = parseInt(prompt("box1"));
+            // let b = parseInt(prompt("box2"));
+            
+            // document.write("Addition" ,a+b + "<br>" + "Subtraction",a-b + "<br>" + "Multiplication" + a*b + "<br>" + "Division" + a/b + "<br>" + "Modulus" + a%b );
+        }
+    </script>
+</head>
+<body>
+    <input type="number" name="" id="int1"> <input type="number" name="" id="int2"> <button onclick="demo()">Click</button> <div id="result"></div>
+</body>
+</html>

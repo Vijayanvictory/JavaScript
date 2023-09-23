@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function make() {
+         let div = document.createElement("div");
+         let text = document.createElement("h2");
+
+         let h3 = document.createTextNode("Login page");
+         let inputbox = document.createElement("input");
+         let btn = document.createElement("button");
+         let btntext = document.createTextNode("Click");
+
+         btn.appendChild(btntext);
+         text.appendChild(h3);
+         div.append(text);
+         div.append(inputbox);
+         div.append(btn);
+         document.body.appendChild(div);
+        }
+    </script>
+    </head>
+<body>   
+     <button onclick="make()"> Click</button> 
+</body>
+</html>
