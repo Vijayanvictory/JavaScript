@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>array</title>
+    </head>
+    <body>  
+
+    <button class="yy" onclick="push()">click</button>
+    <script>
+        function push(){
+        var nums = [1,2,3,4,"hello"];
+        nums.push("8");
+        document.write(nums + "--This is push statement in js array");
+        }
+    </script>
+
+<button onclick="pop()">click</button>
+<script>
+    function pop(){
+    var nums = [1,2,3,4,"hello"];
+    nums.pop();
+    document.write(nums + "--This is pop statement in js array");
+    }
+</script>
+
+<button onclick="shift()">click</button>
+<script>
+    function shift(){
+    var nums = [1,2,3,4,"hello"];
+    nums.shift();
+    document.write(nums + "--This is shift statement in js array");
+    }
+</script>
+
+<button onclick="unshift()">click</button>
+<script>
+    function unshift(){
+    var nums = [1,2,3,4,"hello"];
+    nums.unshift("kgisl");
+    document.write(nums + "--This is unshift statement in js array");
+    }
+</script>
+
+<button onclick="length()">click</button>
+<script>
+    function length(){
+    var nums = [1,2,3,4,"hello"];
+    nums.length();
+    document.write(nums + "--This is length statement in js array");
+    }
+</script>
+
+<button onclick="toString()">click</button>
+<script>
+    function toString(){
+    var nums = [1,2,3,4,"hello"];
+    nums.toString();
+    document.write(nums + "--This is toString statement in js array");
+    }
+</script>
+
+<button onclick="join()">click</button>
+<script>
+    function join(){
+    var nums = [1,2,3,4,"hello"];
+    nums.join("**");
+    document.write(nums + "--This is join statement in js array");
+    }
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Arrow function:
+        To reduce the code lines.
+        Then variable name is accessed for function name.
+        Public static void main(string...ags).
+      -->
+      <!-- Eg:
+        Arrow: -->
+           <script>
+                let arr="";
+                arr=(a,b)=>{
+                    return a*b;
+                }
+                document.write(arr(5,3));
+           </script>
+           <script>
+                let num=x=>{
+                    //no need to open the parantheses for given the parameter.
+                    document.write(x);
+                }
+                num(40);
+           </script>
+           <script>
+            var msg=()=>document.write("welcome arrow");msg();
+           </script>
+           <script>
+            let meg=(a,b)=>document.write(a+b);meg(10,5);
+           </script>
+           <script>
+            let show="";show=a=>"Hii"+a;document.write(show(" Welcome"));
+           </script>
+
+</body>
+</html>
