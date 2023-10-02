@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Regular expression it is also called as RegEX:
+    ==>it is sequence of character forms a search pattern.
+     when you search for data in a text, you can use this search. 
+    pattern to describe what you are searching for:
+    ==> it can be single or more complicated pattern.
+     it is used to perform all types of text search & text replace.
+    operations:
+    ==> mainly used to validate the form on web oage.
+     it is also called as rational expression. -->
+<!-- 
+     syntax:
+        /pattern/modifier
+
+        eg:
+
+        /KGISL/g==>RegEX
+        Kgisl--Pattern used to search 
+        i--modifier (search to be case-insenstive)-ignore
+        g--find all the match ratehr than stopping after the first match-global
+        m--multiline
+
+        RegEx pattern:
+        [abc]--find any of character between brackets.
+        [0-9]--find any numbers or digits between brackets.
+        [x|y]--find alternative separated with | .
+        /\d/-meta character pattern - here d is digit
+        /\s/-white space
+
+        -->
+          
+        <!-- .match -->
+        <script>
+            let txt = "KGM Educational system KGM KGM kgm";
+            let out  = txt.match(/kgm/ig);
+            document.write(out + "<br>");
+        </script>
+        <script>
+            let a = "kgm Educational system 00906789 ";
+            let b  = a.match(/[ea]/ig);
+            let c = a.match(/\d/g);  //we can also use this two line like ==> let b = a.match(/[ea\d]/g);
+            document.write(b + "<br>");
+            document.write(c + "<br>");
+        </script>
+
+        <!-- .search -->
+        <script>
+            let text = "KGM Educational system";
+            let output  = text.search("system");
+            document.write(output + "<br>");
+        </script>
+
+        <!-- .replace -->
+        <script>
+            let input = "Kgisl KGISL kgisl";
+            let index=input.replace("KGISL","KGM");
+            document.write(index + "<br>");
+        </script>
+
+        <!-- .replaceAll -->
+         <script>
+            let change = "Kgisl KGISL kgisl";  
+            let outer = change.replaceAll(/KGISL/ig,"KGM");
+            document.write(outer + "<br>");
+        </script>
+
+        <!-- .match -->
+        <script>
+            let find = "working shownig searchIng finding bonding";  
+            let show = find.match(/ing/mgi);
+            document.write(show);
+        </script>
+
+        <!--Quantifiers: find the number of character.
+        n+ => match the string that contains atleast one n.
+        n* => match the string 0 or more occurance of n.
+        n? => match the string conatins 0 or one occurance of n.  -->
+
+        <script>
+            let quanti = "Hello world";
+            let finding = quanti.match(/o+/g);
+            document.write(finding);
+        </script>
+        <script>
+            let quan = "Hello world";
+            let findin = quan.match(/o*/g);
+            document.write(findin);
+        </script>
+        <script>
+            let quantif = "Hello world";
+            let findi = quantif.match(/o?/g);
+            document.write(findi);
+        </script>
+        <script>
+            var a1= "Hello this is spaarta";
+            var b2 = a.match(/zel+/g);
+            console.log(b2);
+
+            var a1= "Hello this is spaarta";
+            var b2 = a.match(/ael+/g);
+            console.log(b2);
+
+            var a1= "Hello this is spaarta";
+            var b2 = a.match(/lel+/g);
+            console.log(b2);
+        </script>
+        <!-- These are the QUANTIFIERS functions:
+        test():
+            search the string for a given pattern and returns true or false depending on the result
+        exec():
+            search the string for a given pattern and return the founded text as an object.
+        -->
+        <script>
+            let found = /R/;
+            const  txtfile=found.test("This is REXexpression");
+            document.wriet(txtfile);
+        </script>
+        <script>
+            let patt=/d/.exec("The data");
+            document.write(patt);
+            document.write(patt.index);
+        </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+            function validateUserName()
+
+            {
+
+            var inputValue = document.getElementById("input").value;
+
+            var regexPattern = /^[a-zA-Z0-9" "]+$/;
+
+
+            if(regexPattern.test(inputValue))
+
+            {
+
+                document.getElementById("result").innerHTML="UserName is Valid";
+
+            return true;
+
+            }
+
+            else
+
+            {
+
+                document.getElementById("result").innerHTML="Enter valid UserName";
+
+            return false;
+
+            }
+
+            }
+    </script>
+</head>
+<body>
+    <form>
+
+        <label>UserName:</label>
+        
+        <input type="text" name="name" id="input"/><br><br>
+        
+        <button type="submit" onclick="validateUserName()">Submit</button>
+        
+        </form>
+        <div id="result"></div>
+</body>
+</html>

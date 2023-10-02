@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Math function is a static memory/ it doesn't need object for run the code , automatically run the code => like java -->
+    <span id="sqrt"></span>
+    <script>
+        document.getElementById("sqrt").innerHTML=Math.sqrt(10);
+    </script>
+
+    <br>
+
+    <span id="random"></span>
+    <script>
+        document.getElementById("random").innerHTML=Math.random(20,1);
+    </script>
+
+    <br>
+
+    <span id="poweroff"></span>
+    <script>
+        document.getElementById("poweroff").innerHTML=Math.pow(3,3);
+    </script>
+
+    <br>
+
+    <span id="floor"></span>
+    <script>
+        document.getElementById("floor").innerHTML=Math.floor(4.3);
+    </script>
+
+    <br>
+
+    <span id="ceil"></span>
+    <script>
+        document.getElementById("ceil").innerHTML=Math.ceil(4.9);
+    </script>
+
+    <br>
+
+    <span id="round"></span>
+    <script>
+        document.getElementById("round").innerHTML=Math.round(4.5);
+    </script>
+    
+    <br>
+    
+    <span id="absolute"></span>
+    <script>
+        document.getElementById("absolute").innerHTML=Math.abs(-2345678); //if you give an negative value it will repeat the positive value automatically
+    </script>
+    <span id="tofixed"></span>
+    <script>
+        function demo(){
+            var a = 20.12345678;
+            document.getElementById("tofixed").innerHTML=Math.tofixed(5);
+        }
+         //if you give an negative value it will repeat the positive value automatically
+    </script>
+</body>
+</html>

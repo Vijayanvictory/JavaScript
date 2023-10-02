@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- String: group of characters. 1@kJ. Real time ==> valitation. pool memory ==> duplicates no. Mainly string is for strong and manipulating text.-->
+    <!-- 2 ways:
+         By String literal ==> var str = "JavaScript" 
+         By String Object(Using new keyword) ==> var str = new-->
+
+         <script>
+
+            var str = "javascript";
+            document.write(str+"<br>");
+
+            var str2 = new String("live script");
+            document.write(str2+"<br/>");
+            document.write(str2.charAt(1)+"<br/>");
+
+            var str3 = "It is kgm form";
+            document.write(str3.split(" "));
+
+            let First_name = "Mazhil";
+            let last_name = "Mathi";
+            let connect = First_name.concat(last_name);
+            document.write(connect)+"<br/>";
+            document.write(connect.indexOf("l")+"<br/>");
+            document.write(connect.toUpperCase()+"<br/>");
+            document.write(connect.toLowerCase()+"<br/>");
+            document.write(connect.slice(0,2)+"<br/>");
+
+            var code = " java progarmming ";
+            document.write(code)+"<br/>";
+            document.write(code.trim()+"<br/>");
+
+            var Code = "java";
+            Code = Code.concat("script")+"<br/>";
+            document.write(Code);
+
+            </script>
+
+</body>
+</html>
